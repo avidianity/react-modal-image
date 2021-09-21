@@ -1,29 +1,29 @@
-import { Component } from "react";
+import { Component } from 'react';
 
 function appendStyle(id, css) {
-  if (!document.head.querySelector("#" + id)) {
-    const node = document.createElement("style");
-    node.textContent = css;
-    node.type = "text/css";
-    node.id = id;
+	if (!document.head.querySelector('#' + id)) {
+		const node = document.createElement('style');
+		node.textContent = css;
+		node.type = 'text/css';
+		node.id = id;
 
-    document.head.appendChild(node);
-  }
+		document.head.appendChild(node);
+	}
 }
 
 export default class StyleInjector extends Component {
-  componentDidMount() {
-    appendStyle(this.props.name, this.props.css);
-  }
+	componentDidMount() {
+		appendStyle(this.props.name, this.props.css);
+	}
 
-  componentWillUnmount() {
-    const node = document.getElementById(this.props.name);
-    node.parentNode.removeChild(node);
-  }
+	componentWillUnmount() {
+		const node = document.getElementById(this.props.name);
+		node.parentNode.removeChild(node);
+	}
 
-  render() {
-    return null;
-  }
+	render() {
+		return null;
+	}
 }
 
 export const lightboxStyles = ({ imageBackgroundColor }) => `
