@@ -1,4 +1,4 @@
-# react-modal-image
+# @avidian/react-modal-image
 
 [![CircleCI][build-badge]][build]
 [![npm package][npm-badge]][npm]
@@ -6,6 +6,16 @@
 A _lightweight_ React component providing modal image Lightbox.
 
 [DEMO](https://aautio.github.io/react-modal-image/)
+
+## Installation
+
+```sh
+npm install @avidian/react-modal-image
+```
+
+```sh
+yarn add @avidian/react-modal-image
+```
 
 ## Features
 
@@ -24,7 +34,7 @@ You need to bring your own `Set` polyfill if you use old Internet Explorers.
 ## Simple API
 
 ```js
-import ModalImage from "react-modal-image";
+import ModalImage from "@avidian/react-modal-image";
 
 <ModalImage
   small={urlToTinyImageFile}
@@ -33,18 +43,18 @@ import ModalImage from "react-modal-image";
 />;
 ```
 
-| Prop                   | Type      | Description                                                                                                   |
-| ---------------------- | --------- | ------------------------------------------------------------------------------------------------------------- |
-| `className`            | `String`  | Optional. `class` for the small preview image.                                                                |
-| `alt`                  | `String`  | Optional. `alt` for the small image and the heading text in Lightbox.                                         |
-| `small`                | `URL`     | `src` for the small preview image.                                                                            |
-| `smallSrcSet`          | `String`  | Optional. `srcSet` for the small preview image.                                                               |
-| `medium`               | `URL`     | Optional if `large` is defined. Image shown when zoomed out in Lightbox.                                      |
-| `large`                | `URL`     | Optional if `medium` is defined. Image shown when zoomed in Lightbox. Downloadable.                           |
-| `hideDownload`         | `boolean` | Optional. Set to `true` to hide download-button from the Lightbox.                                            |
-| `hideZoom`             | `boolean` | Optional. Set to `true` to hide zoom-button from the Lightbox.                                                |
-| `showRotate`           | `boolean` | Optional. Set to `true` to show rotate-button within the Lightbox.                                            |
-| `imageBackgroundColor` | `String`  | Optional. Background color of the image shown in Lightbox. Defaults to black. Handy for transparent images.   |
+| Prop                   | Type      | Description                                                                                                 |
+| ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------- |
+| `className`            | `String`  | Optional. `class` for the small preview image.                                                              |
+| `alt`                  | `String`  | Optional. `alt` for the small image and the heading text in Lightbox.                                       |
+| `small`                | `URL`     | `src` for the small preview image.                                                                          |
+| `smallSrcSet`          | `String`  | Optional. `srcSet` for the small preview image.                                                             |
+| `medium`               | `URL`     | Optional if `large` is defined. Image shown when zoomed out in Lightbox.                                    |
+| `large`                | `URL`     | Optional if `medium` is defined. Image shown when zoomed in Lightbox. Downloadable.                         |
+| `hideDownload`         | `boolean` | Optional. Set to `true` to hide download-button from the Lightbox.                                          |
+| `hideZoom`             | `boolean` | Optional. Set to `true` to hide zoom-button from the Lightbox.                                              |
+| `showRotate`           | `boolean` | Optional. Set to `true` to show rotate-button within the Lightbox.                                          |
+| `imageBackgroundColor` | `String`  | Optional. Background color of the image shown in Lightbox. Defaults to black. Handy for transparent images. |
 
 ## Lightbox-only API for advanced usage
 
